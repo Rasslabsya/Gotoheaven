@@ -1,5 +1,5 @@
 # Gotoheaven
-![ой](https://github.com/Rasslabsya/Gotoheaven/blob/main/ezgif.com-add-text.jpg)
+![](https://github.com/Rasslabsya/Gotoheaven/blob/main/assets/ezgif.com-add-text.jpg)
 
 <div align="center">
 

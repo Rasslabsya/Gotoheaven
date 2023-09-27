@@ -78,14 +78,43 @@
 в хорошем  Dockerfile, а также две плохие практики по использованию этого контейнера.
 ```
 Мы решили обернуть в docker-контейнер образ Ubuntu:
+
 Плохой dockerfile (https://hub.docker.com/repository/docker/wertolab/project_bad/general)
+
 Хороший dockerfile (https://hub.docker.com/repository/docker/wertolab/project_good/general)
 
 Часть основных команд, которые были использованы:   
-```FROM ubuntu``` - берем образ питона     
+```FROM ubuntu``` - берем образ питона   
+
 ```RUN``` - устанавливаем и обновляем пакеты
+
 ```COPY``` - копируем файлы с компьютера, который запускает сборку внутрь образа
 
+**Выполнение работы:**     
+
+### Плохой Dockerfile
+
+1)  Использование образа ```ubuntu:latest``` без указания версии - это может привести к неожиданным изменениям в базовом образе при обновлениях. Вместо этого лучше использовать конкретную версию образа.
+<p align='center'>
+<img width='600px' src="https://github.com/Rasslabsya/Gotoheaven/blob/main/assets/bad%20latest.png">
+</p>
+
+2)  Множественные ```run``` - это может увеличить размер образа и сделать его менее эффективным. Нужно объединять команды в одну строку и использовать многозадачные команды, если это возможно.
+<p align='center'>
+<img width='600px' src="https://github.com/Rasslabsya/Gotoheaven/blob/main/assets/bad%20run'.png">
+</p>
+
+3) Использование ```add``` - ```add``` может автоматически распаковывать архивы и загружать файлы из URL, что может быть опасно. Вместо ADD лучше использовать COPY, если вам нужно копировать локальные файлы.
+<p align='center'>
+<img width='600px' src="https://github.com/Rasslabsya/Gotoheaven/blob/main/assets/Снимок%20экрана%202023-09-28%20в%201.01.25%20AM.png">
+</p>
+
+### Хороший Dockerfile
+
+В данном dockerfile'е мы избежали всех описанных ранее "bad practices".
+<p align='center'>
+<img width='600px' src="https://github.com/Rasslabsya/Gotoheaven/blob/main/assets/good%20run.png">
+</p>
 
 
 

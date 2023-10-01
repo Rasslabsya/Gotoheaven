@@ -18,3 +18,10 @@ jobs:
       run: docker build . --file Dockerfile --tag lab3:latest
     - name: Run the Docker image
       run: docker run -d lab3:latest
+    - name: Login to Dockerhub
+      run: docker login -u wertolab -p Werst@123
+    - name: Create tag for docker
+      run: docker tag lab3 wertolab/lab3:latest
+    - name: Push image to Dockerhub
+      run: docker push wertolab/lab3:latest
+

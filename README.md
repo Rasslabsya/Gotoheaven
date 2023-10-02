@@ -138,7 +138,7 @@
 
 **Выполнение работы:** 
 
-###Создание Workflow файла
+### Создание Workflow файла
 
 В этом файле есть 5 команд:
 
@@ -148,7 +148,15 @@
 4) docker tag lab3 wertolab/lab3:latest - Регистрация собранного образа
 5) docker push wertolab/lab3:latest - Отправка образа в репозиторий на DockerHub
 
-###Создание Dockerfile
+<p align='center'>
+<img width='600px' src="https://github.com/Rasslabsya/Gotoheaven/blob/main/assets/lab3_workflow_file_screen.png">
+</p>
+
+### Создание Dockerfile
+
+<p align='center'>
+<img width='600px' src="https://github.com/Rasslabsya/Gotoheaven/blob/main/assets/lab3_Dockerfile_screen.png">
+</p>
 
 
 
